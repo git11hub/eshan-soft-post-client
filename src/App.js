@@ -6,6 +6,7 @@ import Signin from './components/screens/SignIn'
 import Profile from './components/screens/Profile'
 import Signup from './components/screens/Signup'
 import {reducer,initialState} from './reducers/userReducer'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export const UserContext = createContext()
 

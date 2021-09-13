@@ -14,10 +14,11 @@ function Navbar() {
                     onClick={()=>{
                         localStorage.clear()
                         dispatch({type:"CLEAR"})
-                        history.push('/signin')
+                        history.push('/signin')                        
                     }}
+                    style={{color:"white"}}
                     >
-                        Logout
+                        <strong>Logout</strong>
                     </button>
                 </li>
             ]
@@ -29,14 +30,14 @@ function Navbar() {
         }
     }
     return (
-        <nav style={{background:"rgba(255, 99, 71, 0.8)"}}>
-        <div style={{margin:"auto",width:"50%",}} className="nav-wrapper">
-          <Link to={state?"/":"/signin"} className="brand-logo">Eshan Logo</Link>
-          <ul id="nav-mobile" className="right">
-            {renderList()}            
-          </ul>
-        </div>
-      </nav>
+        <nav className="">
+            <div className="">
+            <Link to={state?"/":"/signin"} className="mx-5">Eshan Logo</Link>
+            <ul id="nav-mobile" className="right mx-5">
+                {renderList()}            
+            </ul>
+            </div>
+        </nav>
     )
 }
 

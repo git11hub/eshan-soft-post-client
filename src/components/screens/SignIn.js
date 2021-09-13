@@ -38,27 +38,29 @@ function SignIn() {
     }
 
     return (
-        <div style={{margin:"auto",width:"30%"}} className="myCard">
-            <div className="card auth-card">
-                <h2>Login</h2>
+        <div className="myCard mt-5 d-flex justify-content-center">
+            <div className="card auth-card w-md-25">
+                <h2 className="d-flex justify-content-center mt-3">Login</h2>
                 <input
+                className="mx-5 w-75"
                 type="text"
                 placeholder="email"
                 value={email}
                 onChange={(e)=>setEmail(e.target.value)}
                 />
                 <input
+                className="mx-5 w-75"
                 type="password"
                 placeholder="password"
                 value={password}
                 onChange={(e)=>setPassword(e.target.value)}
                 />
-                  <button className="btn waves-effect waves-light"
+                  <button className="btn waves-effect waves-light mt-5 mx-5 w-75"
                   onClick={()=>PostData()}
                   >
                       SignIn
                 </button>
-                <h5>
+                <h5 className="d-flex justify-content-center mt-5 p-5">
                     <Link to="signup">Don't have an account?</Link>
                 </h5>
             </div>
